@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbSheet = new System.Windows.Forms.ComboBox();
             this.btnBrowse = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.cardnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +101,7 @@
             this.textFileName.ReadOnly = true;
             this.textFileName.Size = new System.Drawing.Size(630, 26);
             this.textFileName.TabIndex = 3;
+            this.textFileName.TextChanged += new System.EventHandler(this.textFileName_TextChanged);
             // 
             // label2
             // 
@@ -142,6 +145,30 @@
             this.btnBrowse.Text = "...";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(1285, 107);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(195, 52);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "&Delete Data";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1285, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 54);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "View Data";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // cardnoDataGridViewTextBoxColumn
             // 
@@ -194,7 +221,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.cmbSheet);
             this.Controls.Add(this.label3);
@@ -236,6 +265,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyStructureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn joinDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button button2;
     }
 }
 
